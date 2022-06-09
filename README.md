@@ -1,17 +1,17 @@
-# YOUNGANCEL
+# YOUNGANCEL(WORLD FOOTBALL)
 
 #### Created By Developer Tim on 08-10-2022
 
 ## Description
 
-Obtain Info about football here
+Obtain Info about football here(Livescore (15s), live & pre-match odds, events, line-ups, coachs, players, top scorers, standings, statistics, transfers, predictions)
 
 ## Setup Requirements
 
 - Git
 - Web-browser or your choice
 - Github
-- Django 
+- Flask 
 - Pip
 - Python 3.8
 - PostgreSQL
@@ -73,7 +73,7 @@ The following languages have been used on this project:
 - CSS
 - Bootstrap
 - Python
-- Django
+- Flask
 - PostgreSQL
 
 ## Setup/Installation Requirements
