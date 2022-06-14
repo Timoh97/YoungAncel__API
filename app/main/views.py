@@ -16,7 +16,7 @@ conn.request("GET", "/timezone", headers=headers)
 res = conn.getresponse()
 data = res.read()
 
-print(data.decode("utf-8"))
+# print(data.decode("utf-8"))
 
 @main.route('/')
 def index():
