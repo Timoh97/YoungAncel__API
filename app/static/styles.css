@@ -1,4 +1,8 @@
-
+body{
+    border: .2em solid white;
+    margin: 2em;
+    border-radius: .5%;
+}
 .items{
     background-color: black;
     height: auto;
@@ -44,6 +48,9 @@ h3{
     font-size: x-large;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: initial;
+}
+span{
+    color: brown;
 }
 table,tr{
     border: .2em solid white;

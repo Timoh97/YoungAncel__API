@@ -2,22 +2,34 @@ from flask import render_template
 from . import main
 
 import http.client
-from api import api_key
+from ..api import api_key
+import json
 
-conn = http.client.HTTPSConnection("api-football-beta.p.rapidapi.com")
+
+
+conn = http.client.HTTPSConnection("odds.p.rapidapi.com")
 
 headers = {
     'X-RapidAPI-Key': api_key,
-    'X-RapidAPI-Host': "api-football-beta.p.rapidapi.com"
+    'X-RapidAPI-Host': "odds.p.rapidapi.com"
     }
 
-conn.request("GET", "/timezone", headers=headers)
+conn.request("GET", "/v4/sports?all=true", headers=headers)
 
 res = conn.getresponse()
 data = res.read()
 
-# print(data.decode("utf-8"))
+name=data.decode("utf-8")
+conv = json.loads(name)
+game=conv
+
 
 @main.route('/')
 def index():
-    return render_template("index.html")
+    games={'game':game}
+    dictionary=games.values()
+    dictionary=dictionary
+    
+    # print(dictionary) gives list inside a list
+    
+    return render_template("main/index.html")
